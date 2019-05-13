@@ -350,10 +350,6 @@ document.addEventListener("touchmove",e=>{
 });
 log=a=>console.log(JSON.stringify(a));
 function render(timeStamp) {
-	var last = Date.now();
-	
-	canvas.width = innerWidth*quality;
-    canvas.height = innerHeight*quality;
     gl.clearColor(1,0,0,1);
     gl.clear(gl.COLOR_BUFFER_BIT);
     timeLocation = gl.getUniformLocation(program,"u_time");
@@ -370,10 +366,5 @@ function render(timeStamp) {
     document.getElementsByClassName("actualscreen")[0].height=innerHeight;
     document.getElementsByClassName("actualscreen")[0].getContext("2d").drawImage(canvas,0,0,innerWidth*quality,innerHeight*quality,0,0,innerWidth,innerHeight);
     requestAnimationFrame(render);
-	var time = Date.now()-last;
-	if(1000/time<15)
-		quality-=.03;
-	else if(1000/time>40)
-		quality+=.03;
 }
 setTimeout(init);
