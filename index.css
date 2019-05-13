@@ -1,4 +1,7 @@
 /*Baron*/
+* {
+	user-select: none;
+}
 canvas {
     position: fixed;
     left: 0;
