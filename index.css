@@ -1,0 +1,19 @@
+/*Baron*/
+canvas {
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+.text {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    line-height: 100vh;
+    font-family: monospace;
+    color: red;
+    text-align: center;
+    font-size: 10vw;
+    background: radial-gradient(transparent,rgba(255,0,0,.6));
+}

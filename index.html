@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<!--Baron-->
+	<head>
+		<title>Beertje!</title>
+		<script src="./index.js"></script>
+		<link rel="stylesheet" href="index.css">
+	</head>
+    <body>
+		<script class="2d-vertex-shader" type="x-shader/x-vertex">// <![CDATA[
+attribute vec2 a_position;
+  void main() {
+    gl_Position = vec4(a_position, 0, 1);
+  }
+// ]]></script>
+        <canvas class="glscreen"></canvas>
+        <canvas class="actualscreen"></canvas>
+        <div class="text">Fijne Moederdag!</div>
+    </body>
+</html>
