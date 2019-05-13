@@ -350,11 +350,11 @@ document.addEventListener("touchmove",e=>{
 });
 log=a=>console.log(JSON.stringify(a));
 function render(timeStamp) {
-	if(1000/timestamp<15) {
+	if(1000/timeStamp<15) {
 		quality-=.03;
 		setTimeout(init);
 		return;
-	} else if(1000/timestamp>40) {
+	} else if(1000/timeStamp>40) {
 		quality+=.03;
 		setTimeout(init);
 		return;
