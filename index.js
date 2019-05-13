@@ -350,15 +350,13 @@ document.addEventListener("touchmove",e=>{
 });
 log=a=>console.log(JSON.stringify(a));
 function render(timeStamp) {
-	if(1000/timeStamp<15) {
+	if(1000/timeStamp<15)
 		quality-=.03;
-		setTimeout(init);
-		return;
-	} else if(1000/timeStamp>40) {
+	else if(1000/timeStamp>40)
 		quality+=.03;
-		setTimeout(init);
-		return;
-	}
+	
+	canvas.width = innerWidth*quality;
+    canvas.height = innerHeight*quality;
     gl.clearColor(1,0,0,1);
     gl.clear(gl.COLOR_BUFFER_BIT);
     timeLocation = gl.getUniformLocation(program,"u_time");
